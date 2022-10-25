@@ -1,0 +1,8 @@
+DOCUMENTATION.txt
+pyvenv.cfg
+/esper
+/Include
+/Lib
+/pygame-engine
+/Scripts
+/__pycache__

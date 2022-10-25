@@ -1,0 +1,418 @@
+{
+    "frames": {
+      "Player": {
+        "idle-down": {
+          "idle-down1.png": {
+            "frame": {
+              "x": 0,
+              "y": 0,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        },
+        "idle-left": {
+          "idle-left1.png": {
+            "frame": {
+              "x": 0,
+              "y": 130,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        },
+        "idle-up": {
+          "idle-up1.png": {
+            "frame": {
+              "x": 0,
+              "y": 260,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        },
+        "idle-right": {
+          "idle-right1.png": {
+            "frame": {
+              "x": 0,
+              "y": 390,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        },
+        "walk-down": {
+          "walk-down1.png": {
+            "frame": {
+              "x": 0,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down2.png": {
+            "frame": {
+              "x": 120,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down3.png": {
+            "frame": {
+              "x": 240,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down4.png": {
+            "frame": {
+              "x": 360,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down5.png": {
+            "frame": {
+              "x": 480,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down6.png": {
+            "frame": {
+              "x": 600,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down7.png": {
+            "frame": {
+              "x": 720,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down8.png": {
+            "frame": {
+              "x": 840,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down9.png": {
+            "frame": {
+              "x": 960,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-down10.png": {
+            "frame": {
+              "x": 1080,
+              "y": 520,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        },
+        "walk-left": {
+          "walk-left1.png": {
+            "frame": {
+              "x": 0,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left2.png": {
+            "frame": {
+              "x": 120,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left3.png": {
+            "frame": {
+              "x": 240,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left4.png": {
+            "frame": {
+              "x": 360,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left5.png": {
+            "frame": {
+              "x": 480,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left6.png": {
+            "frame": {
+              "x": 600,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left7.png": {
+            "frame": {
+              "x": 720,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left8.png": {
+            "frame": {
+              "x": 840,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left9.png": {
+            "frame": {
+              "x": 960,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-left10.png": {
+            "frame": {
+              "x": 1080,
+              "y": 650,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        },
+        "walk-up": {
+          "walk-up1.png": {
+            "frame": {
+              "x": 0,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up2.png": {
+            "frame": {
+              "x": 120,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up3.png": {
+            "frame": {
+              "x": 240,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up4.png": {
+            "frame": {
+              "x": 360,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up5.png": {
+            "frame": {
+              "x": 480,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up6.png": {
+            "frame": {
+              "x": 600,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up7.png": {
+            "frame": {
+              "x": 720,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up8.png": {
+            "frame": {
+              "x": 840,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up9.png": {
+            "frame": {
+              "x": 960,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-up10.png": {
+            "frame": {
+              "x": 1080,
+              "y": 780,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        },
+        "walk-right": {
+          "walk-right1.png": {
+            "frame": {
+              "x": 0,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right2.png": {
+            "frame": {
+              "x": 120,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right3.png": {
+            "frame": {
+              "x": 240,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right4.png": {
+            "frame": {
+              "x": 360,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right5.png": {
+            "frame": {
+              "x": 480,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right6.png": {
+            "frame": {
+              "x": 600,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right7.png": {
+            "frame": {
+              "x": 720,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right8.png": {
+            "frame": {
+              "x": 840,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right9.png": {
+            "frame": {
+              "x": 960,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          },
+          "walk-right10.png": {
+            "frame": {
+              "x": 1080,
+              "y": 910,
+              "w": 120,
+              "h": 130
+            },
+            "source": "graphics/Player/link-sprites.png"
+          }
+        }
+      }
+    }
+  }

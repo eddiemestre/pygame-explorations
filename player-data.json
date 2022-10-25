@@ -1,0 +1,23 @@
+{
+    "input": [
+      "idle-down",
+      "idle-left",
+      "idle-up",
+      "idle-right",
+      "walk-down",
+      "walk-left",
+      "walk-up",
+      "walk-right"
+    ],
+    "state": [
+      "idle-down",
+      "idle-left",
+      "idle-up",
+      "idle-right",
+      "walk-down",
+      "walk-left",
+      "walk-up",
+      "walk-right"
+    ],
+    "default-state": "idle-down"
+  }
