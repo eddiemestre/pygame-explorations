@@ -1,4 +1,5 @@
 {
+  "Player": {
     "input": [
       "idle-down",
       "idle-left",
@@ -19,5 +20,20 @@
       "walk-up",
       "walk-right"
     ],
-    "default-state": "idle-down"
-  }
+    "default-state": "idle-down",
+    "depth": 4
+  },
+  "Ground": {
+    "depth": 1
+  },
+  "Layers": [
+    "water",
+    "ground",
+    "ground-details",
+    "floors",
+    "main",
+    "above-main",
+    "canopy",
+    "weather"
+  ]
+}

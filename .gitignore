@@ -6,3 +6,4 @@ pyvenv.cfg
 /pygame-engine
 /Scripts
 /__pycache__
+/tiled
