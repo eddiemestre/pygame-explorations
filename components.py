@@ -39,12 +39,12 @@ class PositionComponent:
         self.position = pygame.math.Vector2(pos[0], pos[1])
 
 class RenderComponent:
-    def __init__(self, still_image=None, depth=4, single_image=True):
+    def __init__(self, still_image=None, depth=4, single=True):
         self.image = still_image # sprite(s) to render. Initialized to none
         self.depth = depth
         self.rect = None
-        self.single_image = single_image
-        if still_image: # if true, this is a still image, so self.rect should be (0,0)
+        self.single = single
+        if still_image and single: # if true, this is a still image, so self.rect should be (0,0)
             self.rect = self.image.get_rect()
 
 # For entities that need to render multiple tiles at once
@@ -54,7 +54,7 @@ class MultiSpriteRenderComponent:
         self.sprite_list = sprite_list
         self.depth = depth
 
-class MapSprite:
+class GameSprite:
     def __init__(self, pos, surf):
         self.image = surf
         self.rect = self.image.get_rect(topleft = pos)
@@ -218,9 +218,9 @@ class AnimationProcessor(esper.Processor):
             if animate.animation_frame >= len(animate.curr_animation):
                 animate.animation_frame = 0
 
-            render.image = animate.curr_animation[int(animate.animation_frame)]
+            render.image = animate.curr_animation[int(animate.animation_frame)].image
             # create a rect from the image and set the center based off position component
-            render.rect = render.image.get_rect(center=pos.position)
+            render.rect = animate.curr_animation[int(animate.animation_frame)].rect
 
                
             animate.animation_frame += PLAYER_ANIMATION_SPEED
@@ -249,9 +249,11 @@ class MovementProcessor(esper.Processor):
 
             # sets position x
             pos.position.x += dir.direction.x * vel.speed
-
+            rend.rect.centerx = pos.position.x
             # sets position y
             pos.position.y += dir.direction.y * vel.speed
+            rend.rect.centery = pos.position.y
+
 
             # keeps sprite in bounds [TEMPORARY]
             # pos.position.x = max(self.minx, pos.position.x)
@@ -275,21 +277,47 @@ class RenderProcessor(esper.Processor):
         self.display_surface.fill('black')
 
         # get player to calculate offset
-        for ent, (input, rend_comp) in self.world.get_components(InputComponent, RenderComponent):
+        for ent, (input, rend_comp, pos) in self.world.get_components(InputComponent, RenderComponent, PositionComponent):
 
             # use player rect to set offset
+            # Horizontal
             self.offset.x = rend_comp.rect.centerx - SCREEN_WIDTH / 2
+
+            # lock camera in map's x bounds
+            if pos.position.x - (SCREEN_WIDTH / 2) <= 0:
+                self.offset.x = 0
+            if pos.position.x + (SCREEN_WIDTH/2) >= MAP_WIDTH:
+                self.offset.x = MAP_WIDTH - SCREEN_WIDTH
+            
+            # Vertical
             self.offset.y = rend_comp.rect.centery - SCREEN_HEIGHT / 2
 
+            # lock camera in map's y bounds
+            if pos.position.y - (SCREEN_HEIGHT / 2) <= 0:
+                self.offset.y = 0
+            if pos.position.y + (SCREEN_HEIGHT/2) >= MAP_HEIGHT:
+                self.offset.y = MAP_HEIGHT - SCREEN_HEIGHT
+
         # iterate over all layers with render components
-        for z, elem in enumerate(LAYERS):
+        for z in range(1, 9):
         # iterate over every Entity that needs to be drawn at this layer and blit it
             for ent, (rend) in self.world.get_component(RenderComponent):
                 if rend.depth == z:
-                    offset_rect = rend.rect.copy()
-                    offset_rect.center -= self.offset
+                    # if we are only dealing with single sprites to render
+                    if rend.single:
+                        offset_rect = rend.rect.copy()
+                        offset_rect.center -= self.offset
 
-                    self.display_surface.blit(rend.image, offset_rect)
+                        self.display_surface.blit(rend.image, offset_rect)
+
+                    # if we need to batch render sprites
+                    else:
+                        for tile in rend.image:
+                            # tile is a MapSprite component
+                            offset_rect = tile.rect.copy()
+                            offset_rect.center -= self.offset
+
+                            self.display_surface.blit(tile.image, offset_rect)
 
             
             # speed of animation

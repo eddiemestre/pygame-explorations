@@ -86,20 +86,24 @@ def run():
     ### Map Loading ###
     ###################
     
-    ground = world.create_entity()
-    ground_depth = parse_render_depth("Ground", "game-data.json")
-
-    world.add_component(ground, PositionComponent((0,0)))
-    world.add_component(ground, RenderComponent(still_image=pygame.image.load('tiled\map_01.png').convert_alpha(), depth=ground_depth))
+    # ground = world.create_entity()
+    # ground_depth = parse_render_depth("Ground", "game-data.json")
+    # world.add_component(ground, RenderComponent(still_image=pygame.image.load('tiled\map_01.png').convert_alpha(), depth=ground_depth))
 
 
     # Actual map loading
-    parse_map('tiled/map_01.tmx')
+    # need a dict with all map layers and their depths
+    create_map_entities('tiled/map_01.tmx', world)
 
-    # TO DO: 
-    # 1. add rect component or add it as part of the render component? 
-    # 2. use these to properly render character to center of screen
-    # 3. understand why rects are important
+    # trees_back = world.create_entity()
+    # world.add_component(trees_back, RenderComponent(still_image=pygame.image.load('tiled\Trees_back.png').convert_alpha(), depth=4))
+
+    # trees_front = world.create_entity()
+    # world.add_component(trees_front, RenderComponent(still_image=pygame.image.load('tiled\Trees.png').convert_alpha(), depth=4))
+
+    # TODO:
+    # Make all entity base components the SpriteComponent/GameSprite? 
+    # Change processors to use these classes when accessing data?
 
     # map data broken into components:
     # collision component (on some elements)

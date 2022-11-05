@@ -35,5 +35,19 @@
     "above-main",
     "canopy",
     "weather"
-  ]
+  ],
+  "Layer Depths": {
+    "map-01": [
+      ["nc_ground", "Trees_back", "nc_flooring", "nc_flooring_upper", "nc_vegetation"],
+      [],
+      [],
+      ["Trees", "c_objects_lower", "c_objects", "c_walls", "c_trees", "c_objects_upper"]
+    ]
+  }, 
+  "Image Source": {
+    "map-01": {
+      "Trees_back": "tiled/Trees_back.png",
+      "Trees": "tiled/Trees.png"
+    }
+  }
 }

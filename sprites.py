@@ -1,5 +1,7 @@
 import pygame
-import json 
+import json
+from components import *
+from settings import *
 
 class SpriteSheet:
     def __init__(self, filename, jsonfile):
@@ -36,7 +38,7 @@ class SpriteSheet:
                 y = sprite[image]['frame']['y']
                 w = sprite[image]['frame']['w']
                 h = sprite[image]['frame']['h']
-                animation_sequence.append(self.get_sprite(x, y, w, h).convert_alpha())
+                animation_sequence.append(GameSprite( PLAYER_START_POSITION, self.get_sprite(x, y, w, h).convert_alpha()))
         except KeyError:
             print("invalid arguments for parsing sprites")
             pass
